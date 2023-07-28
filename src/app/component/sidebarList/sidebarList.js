@@ -28,7 +28,7 @@ const SidebarList = (props) => {
   const [list, setList] = useState(fakeList);
   const filterList = () => {
     console.log("filterList", query);
-    setList(fakeList.filter((item) => item.title.includes(query)));
+    setList(fakeList.filter((item) => item.title.includes(query.trim())));
   };
   useEffect(() => {
     if (query !== "") {
