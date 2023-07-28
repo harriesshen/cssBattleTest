@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
+import "./sidebarList.scss";
 const fakeList = [
   {
     id: "1",
@@ -24,11 +24,15 @@ const SidebarList = (props) => {
   useEffect(() => {
     filterList();
   }, [query]);
-  return list.map((item) => (
-    <div className="sidebar-list" key={`sidebarList-${item.title}`}>
-      <Link href={`/${item.url}`}>{item.title}</Link>
-    </div>
-  ));
+  return (
+    <>
+      {list.map((item) => (
+        <div className="sidebar-list" key={`sidebarList-${item.title}`}>
+          <Link href={`/${item.url}`}>{item.title}</Link>
+        </div>
+      ))}
+    </>
+  );
 };
 
 export default SidebarList;

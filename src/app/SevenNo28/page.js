@@ -1,4 +1,4 @@
-import "./index.scss";
+import "./page.scss";
 
 const Seven_twentyEight = () => {
   return (
