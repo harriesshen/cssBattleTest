@@ -59,8 +59,7 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
-            position: sticky;
-            top: 5%;
+            margin-top: 5%;
             .sidebar-inputbox {
                 position: relative;
                 width: 100%;
@@ -78,7 +77,7 @@ main {
                     color: #000000;
                 }
                 .sidebar-input {
-                    width: 100%;
+                    width: 70%;
                     border: none;
                     background-color: white;
                     line-height: 40px;
@@ -106,8 +105,7 @@ main {
             }
         }
         .sidebar-body {
-            height: 600px;
-            margin-top: 50px;
+            height: 100%;
             overflow-y: scroll;
             scrollbar-width: none;
             &::-webkit-scrollbar {
@@ -118,11 +116,10 @@ main {
             }
         }
         .sidebar-footer {
-            position: sticky;
-            bottom: 1%;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
     }
     .child-component {
