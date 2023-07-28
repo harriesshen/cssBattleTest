@@ -1,0 +1,136 @@
+$sidebarColor: #000000;
+input:active,
+input:focus {
+    outline: none;
+    // border: 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    /* 設定背景為-90度角的漸層色，從 #011f1f 到 #e3e3d3 */
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0.9), rgba(108, 108, 103, 0.8), rgba(0, 0, 0, 0.9));
+    /* 使用名為 AnimeGrade 的動畫，動畫時間為 5 秒，緩動效果為 ease，無限重複播放 */
+    animation: AnimeGrade 5s ease infinite;
+
+    /* 設定背景大小為原始大小的 200% x 200%，讓漸層色顯示更寬廣 */
+    background-size: 200% 200%;
+
+    /* 定義名為 AnimeGrade 的 keyframes 動畫 */
+    @keyframes AnimeGrade {
+        /* 動畫起始狀態，背景位置為 0% 水平，50% 垂直（垂直居中） */
+        0% {
+            background-position: 0% 50%;
+        }
+
+        /* 動畫中間狀態，背景位置為 100% 水平，50% 垂直（水平翻轉） */
+        50% {
+            background-position: 100% 50%;
+        }
+
+        /* 動畫結束狀態，背景位置為 0% 水平，50% 垂直（回到起始狀態） */
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    display: grid;
+    grid-template-columns: 30% 70%;
+    font-size: 18px;
+    font-family: fantasy;
+    // overflow: hidden;
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: $sidebarColor;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        row-gap: 1rem;
+        // box-shadow: var(--clr-red-dark);
+        // transition: var(--transition);
+        color: white;
+        border-radius: 0 1rem 1rem 0;
+        padding: 0 1rem;
+        overflow: hidden;
+        .sidebar-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+            .sidebar-inputbox {
+                position: relative;
+                width: 100%;
+                margin: 0 1rem;
+                overflow: hidden;
+                border-radius: 5px;
+                background-color: white;
+                span {
+                    position: absolute;
+                    // left: 2px;
+                    top: 50%;
+                    left: 5%;
+                    transform: translate(-50%, -50%);
+
+                    color: #000000;
+                }
+                .sidebar-input {
+                    width: 70%;
+                    border: none;
+                    background-color: white;
+                    line-height: 40px;
+                    font-size: 20px;
+                    // margin: 0 45px;
+                    margin-left: 10%;
+                    margin-right: 70px;
+                    font-weight: 700;
+                }
+                .sidebar-buttonIcon {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translate(-50%, -50%);
+                    background-color: #222;
+                    border-radius: 4px;
+                    border-style: none;
+                    box-sizing: border-box;
+                    color: #fff;
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 1.5;
+                }
+            }
+        }
+        .sidebar-body {
+            height: 100%;
+            overflow-y: scroll;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            .sidebar-list {
+                margin-bottom: 1rem;
+            }
+        }
+        .sidebar-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+    .child-component {
+        margin-left: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .show-sidebar {
+        transform: translate(0);
+    }
+}

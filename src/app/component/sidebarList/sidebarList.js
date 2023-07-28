@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const fakeList = [
@@ -13,16 +14,6 @@ const fakeList = [
   },
 ];
 
-let i = 3;
-while (i <= 100) {
-  fakeList.push({
-    id: i,
-    title: `8/${i}`,
-    url: `eightNo${i}`,
-  });
-  i++;
-}
-
 const SidebarList = (props) => {
   const { query } = props;
   const [list, setList] = useState(fakeList);
@@ -31,13 +22,11 @@ const SidebarList = (props) => {
     setList(fakeList.filter((item) => item.title.includes(query.trim())));
   };
   useEffect(() => {
-    if (query !== "") {
-      filterList();
-    }
+    filterList();
   }, [query]);
   return list.map((item) => (
     <div className="sidebar-list" key={`sidebarList-${item.title}`}>
-      {item.title}
+      <Link href={`/${item.url}`}>{item.title}</Link>
     </div>
   ));
 };
