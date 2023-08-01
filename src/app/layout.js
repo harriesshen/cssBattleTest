@@ -59,6 +59,7 @@ export default function RootLayout({ children }) {
               }}
             >
               <SidebarList query={deferredQuery} />
+              <div className="preview-box"></div>
             </div>
           </Suspense>
 

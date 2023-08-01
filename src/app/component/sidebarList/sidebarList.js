@@ -4,13 +4,23 @@ import "./sidebarList.scss";
 const fakeList = [
   {
     id: "1",
-    title: "7/27",
+    title: "07-27",
     url: "SevenNo27",
   },
   {
     id: "2",
-    title: "7/28",
+    title: "07-28",
     url: "SevenNo28",
+  },
+  {
+    id: "3",
+    title: "07-31",
+    url: "SevenNo31",
+  },
+  {
+    id: "4",
+    title: "08-01",
+    url: "EightNo1",
   },
 ];
 
@@ -28,7 +38,9 @@ const SidebarList = (props) => {
     <>
       {list.map((item) => (
         <div className="sidebar-list" key={`sidebarList-${item.title}`}>
-          <Link href={`/${item.url}`}>{item.title}</Link>
+          <Link href={`/${item.url}`} id={`link-${item.title}`}>
+            {item.title}
+          </Link>
         </div>
       ))}
     </>

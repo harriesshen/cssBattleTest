@@ -116,6 +116,14 @@ body {
             .sidebar-list {
                 margin-bottom: 1rem;
             }
+            .preview-box {
+                position: absolute;
+                bottom: 7%;
+                right: 3%;
+                width: 150px;
+                height: 150px;
+                border: 2px solid white;
+            }
         }
         .sidebar-footer {
             display: flex;

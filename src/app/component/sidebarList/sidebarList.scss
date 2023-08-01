@@ -1,11 +1,36 @@
-a:hover:after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 100px;
-    background-image: url("../../assets/0728.png");
-    background-size: 100% 100%;
-    border-radius: 50%;
-    position: absolute;
-    top: 25%;
+$date: (
+    "07-27": "07-27",
+    "07-28": "07-28",
+    "07-31": "07-31",
+    "08-01": "08-01"
+);
+
+@each $key, $value in $date {
+    // 開頭不可直接為變數 #{$key}
+    #link-#{$key}:hover::after {
+        content: "";
+        display: block;
+        width: 150px;
+        height: 150px;
+        background-image: url("../../assets/#{$value}.png");
+        background-size: 100% 100%;
+        border-radius: 50%;
+        position: absolute;
+        // top: 15%;
+        // right: 10%;
+        bottom: 7%;
+        right: 3%;
+    }
 }
+
+// a:hover:after {
+//     content: "";
+//     display: block;
+//     width: 100px;
+//     height: 100px;
+//     background-image: url("../../assets/0728.png");
+//     background-size: 100% 100%;
+//     border-radius: 50%;
+//     position: absolute;
+//     top: 25%;
+// }
