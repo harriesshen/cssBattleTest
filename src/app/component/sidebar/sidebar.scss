@@ -1,0 +1,91 @@
+$sidebarColor: #000000;
+
+.sidebar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: $sidebarColor;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+    // box-shadow: var(--clr-red-dark);
+    // transition: var(--transition);
+    color: white;
+    border-radius: 0 1rem 1rem 0;
+    padding: 0 1rem;
+    overflow: hidden;
+    .sidebar-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+        .sidebar-inputbox {
+            position: relative;
+            width: 100%;
+            margin: 0 1rem;
+            overflow: hidden;
+            border-radius: 5px;
+            background-color: white;
+            span {
+                position: absolute;
+                // left: 2px;
+                top: 50%;
+                left: 5%;
+                transform: translate(-50%, -50%);
+
+                color: #000000;
+            }
+            .sidebar-input {
+                width: 70%;
+                border: none;
+                background-color: white;
+                line-height: 40px;
+                font-size: 20px;
+                // margin: 0 45px;
+                margin-left: 10%;
+                margin-right: 70px;
+                font-weight: 700;
+            }
+            .sidebar-buttonIcon {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(-50%, -50%);
+                background-color: #222;
+                border-radius: 4px;
+                border-style: none;
+                box-sizing: border-box;
+                color: #fff;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 1.5;
+            }
+        }
+    }
+    .sidebar-body {
+        height: 100%;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .sidebar-list {
+            margin-bottom: 1rem;
+        }
+        .preview-box {
+            position: absolute;
+            bottom: 7%;
+            right: 3%;
+            width: 150px;
+            height: 150px;
+            border: 2px solid white;
+        }
+    }
+    .sidebar-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
