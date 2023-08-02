@@ -3,10 +3,10 @@ import "./page.scss";
 const Seven_twentyEight = () => {
   return (
     <div id="container-0728">
-      <div class="bottomDiv"></div>
-      <div class="circle-1"></div>
-      <div class="circle-2"></div>
-      <div class="circle-3"></div>
+      <div className="bottomDiv"></div>
+      <div className="circle-1"></div>
+      <div className="circle-2"></div>
+      <div className="circle-3"></div>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import "./sidebarList.scss";
+import Head from "next/head";
 const fakeList = [
   {
     id: "1",
@@ -21,6 +22,11 @@ const fakeList = [
     id: "4",
     title: "08-01",
     url: "EightNo1",
+  },
+  {
+    id: "5",
+    title: "08-02",
+    url: "EightNo2",
   },
 ];
 
