@@ -28,6 +28,11 @@ const fakeList = [
     title: "08-02",
     url: "EightNo2",
   },
+  {
+    id: "6",
+    title: "08-03",
+    url: "EightNo3",
+  },
 ];
 
 const SidebarList = (props) => {

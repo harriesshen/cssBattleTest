@@ -29,6 +29,7 @@ export default function RootLayout({ children }) {
           key="desc"
         ></meta>
       </Head> */}
+
       <body>
         <Sidebar />
         <div className="child-component">{children}</div>
